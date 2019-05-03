@@ -1,0 +1,34 @@
+
+entity Cd {
+	name String required,
+    performer String,
+    releaseYear String,
+    diskCount String,
+    medium String,
+    label String,
+    state State,
+    added Instant
+}
+
+entity Dvd {
+	name String required,
+    releaseYear String,
+    diskCount String,
+    format String,
+    lang String,
+    state State,
+    added Instant
+}
+
+enum State {
+	OK, AWAY, LOST, EXPECTED, UNDEFINED
+}
+
+// Set pagination options
+paginate Cd, Dvd with pagination
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

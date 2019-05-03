@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="dvd">
+            <h2><span jhiTranslate="collmateApp.dvd.detail.title">Dvd</span> {{dvd.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="collmateApp.dvd.name">Name</span></dt>
+                <dd>
+                    <span>{{dvd.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="collmateApp.dvd.releaseYear">Release Year</span></dt>
+                <dd>
+                    <span>{{dvd.releaseYear}}</span>
+                </dd>
+                <dt><span jhiTranslate="collmateApp.dvd.diskCount">Disk Count</span></dt>
+                <dd>
+                    <span>{{dvd.diskCount}}</span>
+                </dd>
+                <dt><span jhiTranslate="collmateApp.dvd.format">Format</span></dt>
+                <dd>
+                    <span>{{dvd.format}}</span>
+                </dd>
+                <dt><span jhiTranslate="collmateApp.dvd.lang">Lang</span></dt>
+                <dd>
+                    <span>{{dvd.lang}}</span>
+                </dd>
+                <dt><span jhiTranslate="collmateApp.dvd.state">State</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'collmateApp.State.' + dvd.state}}">{{dvd.state}}</span>
+                </dd>
+                <dt><span jhiTranslate="collmateApp.dvd.added">Added</span></dt>
+                <dd>
+                    <span>{{dvd.added}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/dvd', dvd.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

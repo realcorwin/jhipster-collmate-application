@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="cd">
+            <h2><span jhiTranslate="collmateApp.cd.detail.title">Cd</span> {{cd.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="collmateApp.cd.name">Name</span></dt>
+                <dd>
+                    <span>{{cd.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="collmateApp.cd.performer">Performer</span></dt>
+                <dd>
+                    <span>{{cd.performer}}</span>
+                </dd>
+                <dt><span jhiTranslate="collmateApp.cd.releaseYear">Release Year</span></dt>
+                <dd>
+                    <span>{{cd.releaseYear}}</span>
+                </dd>
+                <dt><span jhiTranslate="collmateApp.cd.diskCount">Disk Count</span></dt>
+                <dd>
+                    <span>{{cd.diskCount}}</span>
+                </dd>
+                <dt><span jhiTranslate="collmateApp.cd.medium">Medium</span></dt>
+                <dd>
+                    <span>{{cd.medium}}</span>
+                </dd>
+                <dt><span jhiTranslate="collmateApp.cd.label">Label</span></dt>
+                <dd>
+                    <span>{{cd.label}}</span>
+                </dd>
+                <dt><span jhiTranslate="collmateApp.cd.state">State</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'collmateApp.State.' + cd.state}}">{{cd.state}}</span>
+                </dd>
+                <dt><span jhiTranslate="collmateApp.cd.added">Added</span></dt>
+                <dd>
+                    <span>{{cd.added}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/cd', cd.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

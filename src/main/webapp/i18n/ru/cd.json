@@ -1,0 +1,28 @@
+{
+  "collmateApp": {
+    "cd": {
+      "home": {
+        "title": "Cds",
+        "createLabel": "Создать новый Cd",
+        "createOrEditLabel": "Создать или отредактировать Cd"
+      },
+      "created": "Новый Cd создан с идентификатором {{ param }}",
+      "updated": "Cd обновлен с идентификатором {{ param }}",
+      "deleted": "Cd удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Cd {{ id }}?"
+      },
+      "detail": {
+        "title": "Cd"
+      },
+      "name": "Name",
+      "performer": "Performer",
+      "releaseYear": "Release Year",
+      "diskCount": "Disk Count",
+      "medium": "Medium",
+      "label": "Label",
+      "state": "State",
+      "added": "Added"
+    }
+  }
+}
