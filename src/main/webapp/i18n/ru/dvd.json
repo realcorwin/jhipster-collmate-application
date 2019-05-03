@@ -1,0 +1,27 @@
+{
+  "collmateApp": {
+    "dvd": {
+      "home": {
+        "title": "Dvds",
+        "createLabel": "Создать новый Dvd",
+        "createOrEditLabel": "Создать или отредактировать Dvd"
+      },
+      "created": "Новый Dvd создан с идентификатором {{ param }}",
+      "updated": "Dvd обновлен с идентификатором {{ param }}",
+      "deleted": "Dvd удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Dvd {{ id }}?"
+      },
+      "detail": {
+        "title": "Dvd"
+      },
+      "name": "Name",
+      "releaseYear": "Release Year",
+      "diskCount": "Disk Count",
+      "format": "Format",
+      "lang": "Lang",
+      "state": "State",
+      "added": "Added"
+    }
+  }
+}
